@@ -1,3 +1,4 @@
 <!-- pages/home/home.wxml -->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+<text class="" selectable="false" space="false" decode="false">学习小程序的第一天</text>
