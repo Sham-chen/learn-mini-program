@@ -1,52 +1,18 @@
-// pages/home/home.js
+// pages/category/category.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name: 'Sham',
-    age: '25',
-    students: [
-      { id: 111, name: 'rita', age: 25 },
-      { id: 112, name: 'grace', age: 26 },
-      { id: 113, name: 'angel', age: 27 }
-    ],
-    count: 0,
-    list: []
-  },
-  //方法
-  addClick() {
-    this.setData({
-      count: this.data.count + 1
-    })
-  },
-  subtractClick() {
-    this.setData({
-      count: this.data.count - 1
-    })
-  },
-  handleGetUserInfo(event) {
-    console.log(event);
-  },
-  handleViewClick() {
-    console.log('我被点击了');
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://123.207.32.32:8000/api/h3/recommend',
-      success: (res) => {
-        console.log(res);
-        const data = res.data.data.list
-        this.setData({
-          list: data
-        })
-      }
-    })
+
   },
 
   /**

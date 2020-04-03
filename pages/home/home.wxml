@@ -1,4 +1,13 @@
 <!-- pages/home/home.wxml -->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
-<text class="" selectable="false" space="false" decode="false">学习小程序的第一天</text>
+<!-- 小程序的初体验 -->
+<view>姓名 {{name}}</view>
+<view>年龄 {{age}}</view>
+<view wx:for="{{students}}" wx:key="index">{{item.name}}-{{item.age}}</view>
+<view>当前数字:{{count}}</view>
+<button size="mini" bindtap='addClick'>+</button>
+<button size="mini" bindtap='subtractClick'>-</button>
+<!-- 通过button组件，获取用户信息 -->
+<button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" size="mini">获取授权</button>
+<open-data type="userAvatarUrl"></open-data>
+<view wx:for="{{list}}">{{item.title}}</view>
+<view class="txt" bindtap="handleViewClick">独善其身</view>

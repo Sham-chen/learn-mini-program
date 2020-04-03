@@ -1,6 +1,6 @@
 /* pages/home/home.wxss */
 
-.title {
+.txt {
   color: red;
   font-size: 30px;
 }
