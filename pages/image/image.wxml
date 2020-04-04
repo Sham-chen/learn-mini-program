@@ -1,0 +1,9 @@
+<!-- pages/image/image.wxml -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" />
+<image src="/assets/test/favor.png" />
+<button bindtap="handleChooseImage">选择图片</button>
+<image src="{{imagePath}}" />
+<view>--------------------------------------------</view>
+<image wx:for="{{5}}" lazy-load="{{true}}" bindload="handleImageLoad" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<view>--------------------------------------------</view>
+<image show-menu-by-longpress src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

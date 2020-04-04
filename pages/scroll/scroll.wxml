@@ -1,0 +1,10 @@
+<!-- pages/scroll/scroll.wxml -->
+<scroll-view class="content1" scroll-x="{{true}}">
+  <view class="item1" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+<scroll-view class="wrapper" scroll-y="{{true}}">
+  <view class="item2" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+<scroll-view class="wrapper" scroll-y="{{true}}" bindscroll="handleScroll">
+  <view class="item2" wx:for="{{10}}">{{item}}</view>
+</scroll-view>

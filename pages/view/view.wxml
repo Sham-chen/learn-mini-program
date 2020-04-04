@@ -1,0 +1,5 @@
+<!-- pages/view/view.wxml -->
+<view class="box1" hover-class="hover-box1" hover-stay-time="{{400}}">box1</view>
+<view class="box2" hover-class="hover-box2">
+  <view class="box1" hover-class="hover-box1" hover-stop-propagation>box1</view>
+</view>

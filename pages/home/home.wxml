@@ -1,3 +1,4 @@
 <!-- pages/home/home.wxml -->
 <text class="title">hello world</text>
-<button size="mini">按钮</button>
+<button>按钮</button>
+<text decode>5 &gt; 3</text>
