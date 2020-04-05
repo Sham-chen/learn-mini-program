@@ -1,0 +1,4 @@
+<view class='header'>
+  <include src="./nav.wxml"></include>
+  <view>我是头部</view>
+</view>

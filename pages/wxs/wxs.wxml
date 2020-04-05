@@ -1,0 +1,19 @@
+<!-- pages/wxs/wxs.wxml -->
+<!-- <wxs module="info">
+  var name = 'Grace'
+  var sum = function(n1,n2){
+    return n1+n2
+  }
+  module.exports = {
+    name:name,
+    sum:sum
+  }
+</wxs> -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+<view>{{info.name}}</view>
+<view>{{info.message}}</view>
+<view>{{info.sum(10,20)}}</view>
+<view>--------案例练习--------</view>
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.priceFormat(price,4)}}</view>
+<view>{{format.formatDate(date,'yyyy-MM-dd')}}</view>

@@ -1,0 +1,9 @@
+/* pages/wxml/wxml.wxss */
+
+.txt {
+  font-size: 64rpx;
+}
+
+.active {
+  color: aquamarine;
+}

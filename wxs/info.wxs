@@ -1,0 +1,10 @@
+var name = 'Grace'
+var message = '做我女朋友'
+var sum = function (n1, n2) {
+  return n1 + n2
+}
+module.exports = {
+  name: name,
+  message: message,
+  sum: sum
+}

@@ -1,0 +1,7 @@
+.btn {
+  width: 240rpx;
+  height: 64rpx;
+  background-color: orange;
+  display: inline-block;
+  line-height: 64rpx;
+}

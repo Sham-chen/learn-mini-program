@@ -1,0 +1,35 @@
+<!-- pages/wxml/wxml.wxml -->
+<view>{{firstname+' '+lastname}}</view>
+<view>{{age>=18?'成年人':'未成年人'}}</view>
+<view>{{nowTime}}</view>
+<view>------------------</view>
+<view class="txt {{isActive?'active':''}}">如何能让内心平静，或者每个人都是如此吧</view>
+<button size="mini" bindtap='handleSwitchColor'>切换颜色</button>
+<view>------------------</view>
+<view wx:if="{{isShow}}">内心平静的道路只能你自己寻找</view>
+<button size="mini" bindtap='handleSwitchShow'>显示与隐藏</button>
+<view>------------------</view>
+<button size="mini" bindtap='handleAdd'>分数增长</button>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:elif="{{score>=60}}">及格</view>
+<view wx:else>不及格</view>
+<view>------------------</view>
+<view wx:for="{{['流浪的哲学家','涅槃重生的舞者','站在路口的我']}}">{{item}}-{{index}}</view>
+<view>------------------</view>
+<block wx:for="{{2}}">
+  <view>两耳不闻窗外事</view>
+  <button size="mini">确定</button>
+</block>
+<view>------------------</view>
+<view wx:for="{{language}}" wx:for-item="language" wx:for-index="i">{{language}}-{{i}}</view>
+<block wx:for="{{number}}" wx:for-item="childNumber">
+  <view wx:for="{{childNumber}}">{{item}}</view>
+</block>
+<view>---------模板template---------</view>
+<!-- <template name="contentTemp">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+<import src="/wxml/template.wxml"></import>
+<template is="contentTemp" data="{{btnText:'按钮',content:'独立思考'}}"></template>

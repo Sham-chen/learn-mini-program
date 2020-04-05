@@ -1,0 +1,12 @@
+function priceFormat(value, number) {
+  var number = number || 2
+  var floatPrice = parseFloat(value)
+  return floatPrice.toFixed(number)
+}
+function formatDate(date, fmt) {
+  return '2020-04-05';
+};
+module.exports = {
+  priceFormat: priceFormat,
+  formatDate: formatDate
+}
