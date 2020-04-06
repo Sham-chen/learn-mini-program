@@ -1,3 +1,25 @@
 <!-- pages/home/home.wxml -->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+<view>-----------------------</view>
+<view class="box" bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchEnd" bind:tap="handleTap" bind:longpress="handleLongPress"></view>
+<view>----------事件对象-----------</view>
+<button size="mini" bind:touchend="touchEnd" bind:tap="handleEventClick">事件对象</button>
+<view>---------------------------</view>
+<view class="outer" id="outer" bind:tap="handleOuterClick">
+  <view class="inner" id="inner" bind:tap="handleInnerClick"></view>
+</view>
+<view>---------------------------</view>
+<view class="container">
+  <block wx:for="{{movies}}" wx:key="index">
+    <view class="item" bind:tap="handleItemClick" data-index='{{index}}' data-item='{{item}}'>
+      {{item}}
+    </view>
+  </block>
+</view>
+<view>---------------------------</view>
+<view class="view1" capture-bind:tap="handleCaptureView1" bind:tap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptureView2" bind:tap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bind:tap="handleBindView3"></view>
+  </view>
+</view>
