@@ -1,66 +1,69 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  handleShowToast() {
+    wx.showToast({
+      title: '添加成功',
+      duration: 2000,
+      icon: 'success',
+      mask: true,
+      success: function () {
+        console.log('弹窗展示成功');
+      },
+      fail: function () {
+        console.log('弹窗展示失败');
+      },
+      complete: function () {
+        console.log('完成函数的调用');
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowModal() {
+    wx.showModal({
+      title: '标题',
+      content: '内容',
+      cancelText: '退出',
+      cancelColor: 'red',
+      success: function (res) {
+        console.log(res);
+        if (res.cancel) {
+          console.log('用户点击了退出');
+        }
+        if (res.confirm) {
+          console.log('用户点击了确定');
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleShowLoading() {
+    wx.showLoading({
+      title: '加载ing',
+      mask: true
+    })
+    setTimeout(() => {
+      wx.hideLoading()
+    }, 2000);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleActionSheet() {
+    wx.showActionSheet({
+      itemList: ['相册', '拍照'],
+      itemColor: 'red',
+      success: function (res) {
+        console.log(res);
+        switch (res.tapIndex) {
+          case 0:
+            console.log('相册');
+            break;
+          default:
+            break;
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (options) {
+    return {
+      title: 'hello Grace',
+      path: '/pages/home/home',
+      imageUrl: 'https://img03.sogoucdn.com/app/a/07/e58d89131f3a0882b804313208e0e983'
+    }
   }
 })
