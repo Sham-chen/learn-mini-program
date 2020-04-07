@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     // wx.request({
-    //   url: 'http://123.207.32.32:8000/api/h8/home/data',
+    //   url: '添加微信 -- coderwhy002',
     //   data: {
     //     type: 'sell',
     //     page: 1
@@ -26,7 +26,7 @@ Page({
     // });
 
     // wx.request({
-    //   url: 'http://httpbin.org/post',
+    //   url: '添加微信 -- coderwhy002',
     //   method: 'post',
     //   data: {
     //     name: 'Sham',
@@ -37,7 +37,7 @@ Page({
     //   }
     // })
     request({
-      url: 'http://123.207.32.32:8000/api/h8/recommend'
+      url: '添加微信 -- coderwhy002'
     }).then(res => {
       console.log(res);
     }).catch(err => {
