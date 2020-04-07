@@ -1,0 +1,6 @@
+/* components/my-mulslot/my-mulslot.wxss */
+
+.content {
+  font-size: 52rpx;
+  background-color: lightblue;
+}

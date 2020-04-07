@@ -1,0 +1,6 @@
+<!-- components/my-mulslot/my-mulslot.wxml -->
+<view class="content">幸福</view>
+<slot name="slot1"></slot>
+<slot name="slot2"></slot>
+<slot name="slot3"></slot>
+<view class="content">不幸</view>

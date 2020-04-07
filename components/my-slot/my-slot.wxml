@@ -1,0 +1,4 @@
+<!-- components/my-slot/my-slot.wxml -->
+<view class="content">光明</view>
+<slot></slot>
+<view class="content">黑暗</view>

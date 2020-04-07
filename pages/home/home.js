@@ -5,7 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter: 0,
+    age: 0,
+    name: '',
+    isShow: true
+  },
+  //方法
+  handleIncrement(event) {
+    console.log(event);
+    const detail = event.detail
+    this.setData({
+      counter: this.data.counter + 1,
+      name: detail.name,
+      age: detail.age
+    })
+  },
+  handleTabClick(event) {
+    console.log(event);
+  },
+  handleSelCpn() {
+    // console.log('-----------');
+    const my_sel = this.selectComponent('.sel-class')
+    // my_sel.setData({
+    //   counter: my_sel.data.counter + 10
+    // })
+    my_sel.incrementCounter(10)
+  },
+  handleSlotShow() {
+    this.setData({
+      isShow: !this.data.isShow
+    })
   },
 
   /**

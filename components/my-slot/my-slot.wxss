@@ -1,0 +1,8 @@
+/* components/my-slot/my-slot.wxss */
+
+.content {
+  font-weight: 700;
+  font-size: 52rpx;
+  color: darkcyan;
+  background-color: lightgoldenrodyellow;
+}

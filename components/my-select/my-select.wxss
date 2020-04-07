@@ -1,0 +1,6 @@
+/* components/my-select/my-select.wxss */
+
+.content {
+  color: darkslategrey;
+  font-size: 50rpx;
+}

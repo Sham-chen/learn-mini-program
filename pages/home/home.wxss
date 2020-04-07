@@ -1,6 +1,18 @@
 /* pages/home/home.wxss */
 
 .title {
-  color: red;
+  color: darkslateblue;
   font-size: 30px;
+}
+
+.red {
+  color: lightpink;
+}
+
+.green {
+  color: lightyellow;
+}
+
+.blue {
+  color: lightgreen;
 }
