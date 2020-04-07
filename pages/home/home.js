@@ -1,3 +1,5 @@
+import request from "../../service/network"
+
 // pages/home/home.js
 Page({
 
@@ -12,7 +14,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.request({
+    //   url: 'http://123.207.32.32:8000/api/h8/home/data',
+    //   data: {
+    //     type: 'sell',
+    //     page: 1
+    //   },
+    //   success: (result) => {
+    //     console.log(result);
+    //   },
+    // });
 
+    // wx.request({
+    //   url: 'http://httpbin.org/post',
+    //   method: 'post',
+    //   data: {
+    //     name: 'Sham',
+    //     age: 25
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+    //   }
+    // })
+    request({
+      url: 'http://123.207.32.32:8000/api/h8/recommend'
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
   },
 
   /**
