@@ -1,16 +1,11 @@
-// pages/home/home.js
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message: '勇敢生活'
-  },
-  handlePushDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?title=hello Grace'
-    })
+
   },
 
   /**

@@ -1,0 +1,5 @@
+<!-- pages/comment/comment.wxml -->
+<text>评论页</text>
+<navigator open-type="navigateBack" delta="2">
+  <button size="mini">返回首页</button>
+</navigator>

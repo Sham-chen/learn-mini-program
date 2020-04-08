@@ -1,15 +1,15 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message: '勇敢生活'
+
   },
-  handlePushDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?title=hello Grace'
+  handleBackHome() {
+    wx.navigateBack({
+      delta: 1
     })
   },
 
@@ -17,7 +17,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    const pages = getCurrentPages()
+    const home = pages[pages.length - 2]
+    home.setData({
+      message: '积极乐观'
+    })
   },
 
   /**
